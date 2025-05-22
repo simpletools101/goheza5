@@ -478,7 +478,7 @@ const usersDatabase = [
   },
 ]
 
-export default function UserProfilePage({ params }: { params: { id: string } }) {
+export default async function UserProfilePage({ params }: { params: { id: string } }) {
   const [user, setUser] = useState<any>(null)
   const [loading, setLoading] = useState(true)
 
