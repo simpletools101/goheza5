@@ -6,9 +6,9 @@ import WelcomeNote from '@/components/pages/main/welcomeNote/welcome-note'
 
 export default function Home() {
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col" >
             <WelcomeNote />
-            {/* <MotionVid /> */}
+            <MotionVid />
             <Ratings />
             <UserForm />
         </div>

@@ -60,7 +60,7 @@ export function SocialMediaSection({ socials, updateFormData }: SocialMediaSecti
      * _______________(To be fetched online)
      */
     const [suggestions, setSuggestions] = useState<string[]>([])
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
     const dropdownRef = useRef<HTMLDivElement>(null)
 
     /***
@@ -159,17 +159,7 @@ export function SocialMediaSection({ socials, updateFormData }: SocialMediaSecti
 
     return (
         <div className="space-y-4">
-            <div className="flex items-center">
-                <Button
-                    variant="ghost"
-                    size="sm"
-                    className="-ml-2 text-[#ff5757]"
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? 'transform rotate-180' : ''}`} />
-                    <span className="ml-2">Add social media profiles</span>
-                </Button>
-            </div>
+            
 
             {isOpen && (
                 <motion.div

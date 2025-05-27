@@ -174,7 +174,7 @@ export function RegistrationForm() {
                                     />
                                 </svg>
                             </div>
-                            <span className="text-neutral-400 font-medium">Individual User</span>
+                            <span className="text-neutral-400 font-medium">Creator</span>
                         </button>
 
                         <button

@@ -24,16 +24,27 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en"  >
+        <html lang="en">
             <body className={`${ralewayfont.className}`}>
-                <header className='relative'>
-                    <TitlebarComponent />
-                </header>
-                <main className='bg-[#fafafa]'>{children}</main>
-                <Toaster/>
-                <footer>
-                    <Footer/>
-                </footer>
+                <div className='fixed top-0 left-0 h-screen w-full  -z-10' style={{
+                        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.93), rgba(255, 255, 255, 0.93)),url('/abstract_pattern_design_background_2007.jpg')`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        backgroundColor : '#fafafa'
+                    }}></div>
+                <div
+                    className=" w-full h-screen"
+                   
+                >
+                    <header className="relative">
+                        <TitlebarComponent />
+                    </header>
+                    <main>{children}</main>
+                    <Toaster />
+                    <footer>
+                        <Footer />
+                    </footer>
+                </div>
             </body>
         </html>
     )
